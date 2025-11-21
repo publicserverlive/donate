@@ -32,7 +32,7 @@ function parseData(text) {
         const lines = block
             .split('\n')
             .map(line => line.trim())
-            .filter(line => line && !line.startsWith('#'));
+            .filter(line => line && !line.startsWith('!'));
         if (lines.length < 2) return null; // Skip malformed
 
         const name = lines[0];
