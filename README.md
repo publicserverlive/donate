@@ -1,39 +1,38 @@
 # DONATION_WIKI data viewer
+! This directory contains a small static web app that renders donation information
+! for privacy- and freedom-focused projects.
 
-    ! This directory contains a small static web app that renders donation information
-    ! for privacy- and freedom-focused projects.
+! The **runtime data** used by the app now lives in `README.md`.
 
-    ! The **runtime data** used by the app now lives in `README.md`.
+! Data format (`README.md`)
 
-    ! Data format (`README.md`)
+! Projects are stored as plain text blocks separated by a blank line:
 
-    ! Projects are stored as plain text blocks separated by a blank line:
+! ```text
+! <Name>
+! <Short description>
+! Updated: <YYYY-MM-DD or free text>
+! <METHOD_1>: <address or URL>
+! <METHOD_2>: <address or URL>
+! ...
+! ```
 
-    ! ```text
-    ! <Name>
-    ! <Short description>
-    ! Updated: <YYYY-MM-DD or free text>
-    ! <METHOD_1>: <address or URL>
-    ! <METHOD_2>: <address or URL>
-    ! ...
-    ! ```
+! - The first line is the project name.
+! - The second line is a short description.
+! - An optional `Updated:` line indicates when the entry was last touched.
+! - All following non-empty `Key: Value` lines are treated as donation methods
+!   (e.g. `XMR: <address>`, `Fiat: <URL>`, `BTC: <URL>`).
 
-    ! - The first line is the project name.
-    ! - The second line is a short description.
-    ! - An optional `Updated:` line indicates when the entry was last touched.
-    ! - All following non-empty `Key: Value` lines are treated as donation methods
-    !   (e.g. `XMR: <address>`, `Fiat: <URL>`, `BTC: <URL>`).
+! The web app parses this structure and renders each project as a card with
+! copyable crypto addresses or links.
 
-    ! The web app parses this structure and renders each project as a card with
-    ! copyable crypto addresses or links.
+! Where to edit the list
 
-    ! Where to edit the list
+! - To change what the **app displays**, edit `README.md` in this folder.
+! - To contribute to the canonical public list, use the GitHub link in the
+!   header (`Add or update the list`), which points to the upstream repository.
 
-    ! - To change what the **app displays**, edit `README.md` in this folder.
-    ! - To contribute to the canonical public list, use the GitHub link in the
-    !   header (`Add or update the list`), which points to the upstream repository.
-
-    ! Future: Multipay script to automatically pay from a local crypto node to the projects in the list.
+! Future: Multipay script to automatically pay from a local crypto node to the projects in the list.
 
 PublicServer.live
 PublicServer.live is a non-profit organization that provides free and open-source software to the public.
