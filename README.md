@@ -34,6 +34,8 @@
 
 ! Future: Multipay script to automatically pay from a local crypto node to the projects in the list.
 
+---
+
 PublicServer.live
 PublicServer.live is a non-profit organization that provides free and open-source software to the public.
 Updated: 2025-11-20
